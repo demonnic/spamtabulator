@@ -96,3 +96,7 @@ function spam.write()
   end
   table.save(file, spam.stats)
 end
+
+if not spam.enabled then
+  disableTrigger("spamtabulator")
+end
