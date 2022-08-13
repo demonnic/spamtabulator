@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Count Lines",
+    "patterns": [
+      {
+        "pattern": "^.*$",
+        "type": "regex"
+      }
+    ]
+  }
+]

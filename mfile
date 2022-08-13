@@ -1,0 +1,7 @@
+{
+  "package": "spamtabulator",
+  "version": "1.0.0",
+  "author": "Demonnic",
+  "title": "Quick way to gather stats on line spam from the game",
+  "outputFile": true
+}

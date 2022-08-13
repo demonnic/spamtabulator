@@ -1,0 +1,6 @@
+[
+  {
+    "name": "spamtabulator",
+    "regex": "^spamtab ?(start|stop|update|upload)?$"
+  }
+]
