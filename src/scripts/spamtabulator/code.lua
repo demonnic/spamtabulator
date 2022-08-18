@@ -2,6 +2,11 @@ Spamtabulator = Spamtabulator or {enabled = false, stats = {lines = 0}}
 local spam = Spamtabulator
 local watch = "spamtabulatorStopWatch"
 local dir = getMudletHomeDir() .. "/spamstats"
+
+local function secho(msg)
+  cecho("<orange>(<green>spamtabulator<orange>)<r> " .. msg .. "\n")
+end
+
 function spam.start()
   if spam.enabled then
     return
@@ -28,6 +33,10 @@ function spam.stop()
     return
   end
   local stats = spam.stats
+  if stats.lines == 0 then
+    secho("No lines collected, not doing any math or uploading anything.")
+    return
+  end
   spam.stats.totalSeconds = totalSeconds
   spam.stats.linesPerSecond = spam.stats.lines / totalSeconds
   spam.stats.timePerLine = totalSeconds / spam.stats.lines
@@ -50,9 +59,6 @@ function spam.resetTimeout()
   spam.timeoutID = tempTimer(30, spam.stop)
 end
 
-local function secho(msg)
-  cecho("<orange>(<green>spamtabulator<orange>)<r> " .. msg .. "\n")
-end
 function spam.upload()
   local endpoint = "http://hollerandhoot.com:9090/reportSpam"
   local body = yajl.to_string(spam.stats)
