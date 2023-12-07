@@ -60,7 +60,7 @@ function spam.resetTimeout()
 end
 
 function spam.upload()
-  local endpoint = "http://hollerandhoot.com:9090/reportSpam"
+  local endpoint = "http://45.56.118.128:9090/reportSpam"
   local body = yajl.to_string(spam.stats)
   local header = {["Content-Type"] = "application/json"}
   local handler = function(event, err, url)
