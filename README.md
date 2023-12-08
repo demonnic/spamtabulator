@@ -18,9 +18,9 @@ This is a pretty basic package. Use `spamtab <on|off>` to turn the spam tabulato
 
 * `spamtab`
   * toggles the spamtabulator state. If it is on, it will get turned off. And vice versa.
-* `spamtab on`
+* `spamtab start`
   * turns the spamtabulator on
-* `spamtab off`
+* `spamtab stop`
   * turns the spamtabulator off and uploads the data to demonnic
 * `spamtab update`
   * uninstalls spamtabulator and installs the latest version. No check for what version you have, so it can be used to repair a broken spamtabulator installation
