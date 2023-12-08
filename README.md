@@ -12,7 +12,7 @@ The easiest way to install spamtabulator is with the following command in the Mu
 
 ## Usage
 
-This is a pretty basic package. Use `spamtab <on|off>` to turn the spam tabulator on or off. It will upload the data to me when you turn it off.
+This is a pretty basic package. Use `spamtab <start|stop>` to turn the spam tabulator on or off. It will upload the data to me when you turn it off.
 
 ### Aliases
 
